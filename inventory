@@ -1,9 +1,8 @@
-virtualmachines:
-  hosts:
-    all:
-      k8s-control:
-        ansible_host: 192.168.1.28
-      K8s-worker1:
-        ansible_host: 192.168.1.25
-      K8s-worker2:
-        ansible_host: 192.168.1.26
+hosts:
+  all:
+    k8s-control:
+      ansible_host: 192.168.1.28
+    K8s-worker1:
+      ansible_host: 192.168.1.25
+    K8s-worker2:
+      ansible_host: 192.168.1.26
