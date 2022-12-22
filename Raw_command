@@ -5,4 +5,4 @@
   - name: nmcli
     shell: nmcli device show
 #  - name: Echo String to a tmp file
-#    shell: echo  "Techexpert.tips is a greate website" > /tmp/techexpert
+#    shell: echo  "Hello" > /home/iroh/ansible_vms/text
