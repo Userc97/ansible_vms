@@ -1,0 +1,18 @@
+name: modify sshd_config on remote machine
+hosts: myremotehost
+become: yes
+become_method: sudo
+
+vars:
+sshdconfig: /etc/ssh/sshd_config
+
+tasks:
+
+– name: unset existing PermitRootLogin
+lineinfile: dest="{{ sshdconfig }}" regexp="^[#]*PermitRootLogin without-password" line="#PermitRootLogin without-password" state=present
+
+– name: set PermitRootLogin yes
+lineinfile: dest="{{ sshdconfig }}" insertafter="^#PermitRootLogin without-password" line="PermitRootLogin yes" state=present
+
+– name: reload ssh service
+service: name=ssh state=reloaded
