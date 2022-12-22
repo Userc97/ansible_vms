@@ -9,3 +9,4 @@ sudo systemctl enable qemu-guest-agent
 sudo systemctl start qemu-guest-agent
 sudo systemctl status qemu-guest-agent
 sudo 
+.
