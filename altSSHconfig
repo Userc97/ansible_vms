@@ -1,0 +1,15 @@
+- name: deactivate PermitRootLogin
+  lineinfile:
+    path: "/etc/ssh/sshd_config"
+    line: "PermitRootLogin no"
+    state: present
+  notify:
+    - restart sshd
+
+- name: ensure PermitRootLogin is not activated
+  lineinfile:
+    path: "/etc/ssh/sshd_config"
+    line: "PermitRootLogin yes"
+    state: absent
+  notify:
+    - restart sshd
