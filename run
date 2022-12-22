@@ -1,0 +1,11 @@
+sudo apt update && apt upgrade -y
+sudo apt-get install network-manager
+sudo systemctl start NetworkManager.service 
+sudo systemctl enable NetworkManager.service
+nmcli device show
+systemctl status qemu-guest-agent
+sudo apt update && apt -y install qemu-guest-agent
+sudo systemctl enable qemu-guest-agent
+sudo systemctl start qemu-guest-agent
+sudo systemctl status qemu-guest-agent
+sudo 
