@@ -1,0 +1,14 @@
+-hosts:
+  - all:
+    - name: copy file and run as .sh
+      become: yes
+      tasks: 
+        copy:
+          src: files/filename.sh
+          dest: files/filename.sh
+      tasks:
+        command: ./filename.sh
+        
+        
+        
+        
