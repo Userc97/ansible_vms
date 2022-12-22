@@ -2,8 +2,8 @@
 - hosts: all
   become: yes
   tasks:
-   - name: nmcli
+  - name: nmcli
      shell: nmcli device show
-      - name: Echo String to a tmp file
-        shell: echo  "Hello" > /home/iroh/ansible_vms/text
+  - name: Echo String to a tmp file
+     shell: echo  "Hello" > /home/iroh/ansible_vms/text
 ... 
