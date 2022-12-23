@@ -1,4 +1,5 @@
 ---
 -name: Msg in a bottle
  host:
+ tasks:
    - msg: "HELLO"
