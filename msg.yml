@@ -3,5 +3,5 @@
   tasks:
   - name: Msg in a bottle
     ansible.builtin.copy: 
-      content: "{{HELLO}}"
-      dest: "/home/iroh/text"
+     content: "HELLO"
+     dest: "/home/iroh/text"
