@@ -2,5 +2,6 @@
 - hosts: all
   tasks:
   - name: Msg in a bottle
-    ansible.builtin.debug: 
-      msg: "HELLO"
+    ansible.builtin.copy: 
+      content: "{{HELLO}}"
+      dest: "/home/iroh/text
