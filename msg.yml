@@ -1,6 +1,6 @@
 ---
 - hosts: all
-  name: Msg in a bottle
-  ansible.builtin.debug: 
-    msg: 
-    - "HELLO"
+  tasks:
+  - name: Msg in a bottle
+    ansible.builtin.debug: 
+      msg: "HELLO"
